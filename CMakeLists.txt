@@ -28,7 +28,7 @@ enable_sanitizers(project_options)
 # no static analyzers are enabled by default
 include(cmake/StaticAnalyzers.cmake)
 
-option(ENABLE_PCH "Enable Precompiled Headers" OFF)
+option(ENABLE_PCH "Enable precompiled headers" OFF)
 if(ENABLE_PCH)
         include(cmake/PCH.cmake)
 endif()
