@@ -1,3 +1,15 @@
+set(GCC_COVERAGE_COMPILE_FLAGS "-std=c++2b")
+set(GCC_COVERAGE_LINK_FLAGS    "-lgcov")
+
+set(CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COVERAGE_COMPILE_FLAGS}")
+set(CMAKE_EXE_LINKER_FLAGS  "${CMAKE_EXE_LINKER_FLAGS} ${GCC_COVERAGE_LINK_FLAGS}")
+
+option(ENABLE_SMTH "" FALSE)
+if(ENABLE_SMTH)
+        target_compile_options(project_options INTERFACE -f<rule>)
+        target_link_options(project_options INTERFACE -f<rule>)
+endif()
+
 function(set_project_warnings project_name)
         option(WARNINGS_AS_ERRORS "Treat compiler warnings as errors" TRUE)
 
