@@ -68,7 +68,6 @@ function(set_project_warnings project_name)
                 -Winline # warn if function declared as 'inline' cannot be inline
                 -Winvalid-pch
                 -Wlong-long
-                -Wmissing-declarations # warn if global function is defined without a previous declaration.
                 -Wmissing-format-attribute
                 -Wmissing-include-dirs
                 -Wmissing-noreturn
