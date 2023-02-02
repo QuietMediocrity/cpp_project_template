@@ -19,11 +19,6 @@ enable_sanitizers(project_options)
 # no static analyzers are enabled by default
 include(cmake/StaticAnalyzers.cmake)
 
-option(ENABLE_PCH "Enable precompiled headers" OFF)
-if(ENABLE_PCH)
-        include(cmake/PCH.cmake)
-endif()
-
 option(ENABLE_TPL "Enable third-party libraries" OFF)
 if(ENABLE_TPL)
         include(cmake/TPL.cmake)
